@@ -1,47 +1,46 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Header from "@/components/SimpleHeader.vue";
+import Simple from "@/components/Simple.vue";
+import EngineHeader from "@/components/EngineHeader.vue";
+import Engine from "@/components/Engine.vue";
+import Prog from "@/components/Prog.vue";
+import ProgHeader from "@/components/ProgHeader.vue";
+import ProgOpHeader from "@/components/ProgOpHeader.vue";
+import ProgOp from "@/components/ProgOp.vue";
+
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <Header/>
   </header>
 
   <main>
-    <TheWelcome />
+    <Simple/>
   </main>
+
+  <header>
+    <EngineHeader/>
+  </header>
+
+  <main>
+    <Engine/>
+  </main>
+
+  <header>
+    <ProgHeader/>
+  </header>
+
+  <main>
+    <Prog/>
+  </main>
+
+  <header>
+    <ProgOpHeader/>
+  </header>
+
+  <main>
+    <ProgOp/>
+  </main>
+
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
